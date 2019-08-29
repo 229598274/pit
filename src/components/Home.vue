@@ -44,9 +44,9 @@ export default {
     Bg
   },
   methods:{
-    getDate:async()=>{
+    getDate:async ()=>{
       try{
-        const res =await  axios.get('http://stg.myxxjs.com:9001/api/user')
+        const res =await axios.get('http://stg.myxxjs.com:9001/api/user')
         console.log('res',res)
       }catch(err){
 
