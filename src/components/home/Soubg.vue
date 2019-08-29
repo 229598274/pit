@@ -87,7 +87,7 @@
                         <div class="ss_list_c">
                         	<ul>
                             	<li><a href="#">我的收藏夹</a></li>
-                                <li><a href="#">我的收藏夹</a></li>
+                              <li><a href="#">我的收藏夹</a></li>
                             </ul>
                         </div>
                     </div>     
@@ -99,8 +99,8 @@
                         <div class="ss_list_c">
                         	<ul>
                             	<li><a href="#">客户服务</a></li>
-                                <li><a href="#">客户服务</a></li>
-                                <li><a href="#">客户服务</a></li>
+                              <li><a href="#">客户服务</a></li>
+                              <li><a href="#">客户服务</a></li>
                             </ul>
                         </div>
                     </div>    
@@ -112,7 +112,7 @@
                         <div class="ss_list_c">
                         	<ul>
                             	<li><a href="#">网站导航</a></li>
-                                <li><a href="#">网站导航</a></li>
+                              <li><a href="#">网站导航</a></li>
                             </ul>
                         </div>
                     </div>    
@@ -120,7 +120,7 @@
             </span>
             <span class="fl">|&nbsp;关注我们：</span>
             <span class="s_sh"><a href="#" class="sh1">新浪</a><a href="#" class="sh2">微信</a></span>
-            <span class="fr">|&nbsp;<a href="#">手机版&nbsp;<img src="images/s_tel.png" align="absmiddle" /></a></span>
+            <span class="fr">|&nbsp;<a href="#">手机版&nbsp;<img src="../../assets/images/s_tel.png" align="absmiddle" /></a></span>
         </span>
     </div>
 </div>  
