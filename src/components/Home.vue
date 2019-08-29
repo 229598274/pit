@@ -1,9 +1,10 @@
 <template>
   <div>
-    <Soubg />
+    <!-- <Soubg />
     <Top/>
     <Menu />
-    <Bg />
+    <Bg /> -->
+    <button @click="getDate()">确定</button>
   </div>
 </template>
 
@@ -29,6 +30,9 @@ import Top from './home/Top.vue'
 import Menu from './home/Menu.vue'
 import Bg from './home/Bg.vue'
 
+import axios from 'axios'
+import { async } from 'q';
+
 
 
 export default {
@@ -38,6 +42,16 @@ export default {
     Top,
     Menu,
     Bg
+  },
+  methods:{
+    getDate:async()=>{
+      try{
+        const res =await  axios.get('http://stg.myxxjs.com:9001/api/user')
+        console.log('res',res)
+      }catch(err){
+
+      }
+    }
   }
 }
 
