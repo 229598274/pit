@@ -4,7 +4,8 @@
     <Top/>
     <Menu />
     <Bg /> -->
-    <button @click="getDate()">确定</button>
+    <button @click="add">确定</button>
+    <div>{{ count }}</div>
   </div>
 </template>
 
@@ -31,12 +32,13 @@ import Menu from './home/Menu.vue'
 import Bg from './home/Bg.vue'
 
 import axios from 'axios'
-import { async } from 'q';
-
+import store from '../store/index'
+import { mapActions } from 'vuex'
 
 
 export default {
   name: 'Home',
+  store,
   components:{
     Soubg,
     Top,
@@ -44,14 +46,15 @@ export default {
     Bg
   },
   methods:{
-    getDate:async ()=>{
-      try{
-        const res =await axios.get('http://stg.myxxjs.com:9001/api/user')
-        console.log('res',res)
-      }catch(err){
-
-      }
-    }
+    ...mapActions({
+      add: 'increment' 
+    })
+  },
+  computed:{
+     count(){
+       console.log('this.$store',this.$store)
+       return this.$store.state.count
+     }
   }
 }
 
