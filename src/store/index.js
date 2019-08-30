@@ -3,18 +3,28 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+const www = 'www'
+
 const store = new Vuex.Store({
     state: {
-        count: 0
+        count: {
+            count: 1
+        }
+
     },
     mutations: {
-        increment: (state) => {
-            return state.count++
+        [www]: (state, payload) => {
+            console.log('payload', payload)
+            
+            state.count = {
+                count: state.count.count + payload.count
+            }
         }
     },
     actions: {
-        increment: ({ dispatch, commit }) => {
-            commit('increment')
+        increment: ({ commit }, ttt) => {
+            console.log('ttt', ttt)
+            commit(www, { count: ttt })
         }
     }
 })

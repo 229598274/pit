@@ -4,7 +4,7 @@
     <Top/>
     <Menu />
     <Bg /> -->
-    <button @click="add">确定</button>
+    <button @click="add(12344)">确定</button>
     <div>{{ count }}</div>
   </div>
 </template>
@@ -31,7 +31,6 @@ import Top from './home/Top.vue'
 import Menu from './home/Menu.vue'
 import Bg from './home/Bg.vue'
 
-import axios from 'axios'
 import store from '../store/index'
 import { mapActions } from 'vuex'
 
@@ -51,10 +50,10 @@ export default {
     })
   },
   computed:{
-     count(){
-       console.log('this.$store',this.$store)
-       return this.$store.state.count
-     }
+    count(){
+      console.log('this.$store',this.$store)
+      return this.$store.state.count
+    }
   }
 }
 
