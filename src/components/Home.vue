@@ -4,8 +4,8 @@
     <Top/>
     <Menu />
     <Bg /> -->
-    <button @click="add(12344)">确定</button>
-    <div>{{ count }}</div>
+    <button @click="getNewsList()">确定</button>
+    <div>{{ newsList }}</div>
   </div>
 </template>
 
@@ -45,14 +45,13 @@ export default {
     Bg
   },
   methods:{
-    ...mapActions({
-      add: 'increment' 
-    })
+    getNewsList(){
+      this.$store.dispatch('news/getNewsList')
+    }
   },
   computed:{
-    count(){
-      console.log('this.$store',this.$store)
-      return this.$store.state.count
+    newsList(){
+      return this.$store.state.news.newsList
     }
   }
 }
