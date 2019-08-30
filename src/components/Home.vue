@@ -5,7 +5,9 @@
     <Menu />
     <Bg /> -->
     <button @click="getNewsList()">确定</button>
-    <div>{{ newsList }}</div>
+    <div v-for="(news, index) in newsList" :key="index">
+        <div>{{news.real_name}}</div>
+    </div>
   </div>
 </template>
 
@@ -51,6 +53,7 @@ export default {
   },
   computed:{
     newsList(){
+      console.log('this.$store.state.news.newsList',this.$store.state.news.newsList)
       return this.$store.state.news.newsList
     }
   }
